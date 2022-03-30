@@ -1,7 +1,6 @@
 ---
 id: validator-staking-operations
 title: Validator Staking Operations
-description: Learn how to stake as a validator on the Polygon Network
 keywords:
   - docs
   - matic
@@ -9,28 +8,32 @@ keywords:
   - stake
   - claim
   - unstake
-image: https://matic.network/banners/matic-network-16x9.png 
+image: https://matic.network/banners/matic-network-16x9.png
+description: Learn how to stake as a validator on the Polygon Network
 ---
+
+# Validator Staking Operations
+
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-## Prerequisites
+### Prerequisites
 
-### Full node set up
+#### Full node set up
 
 Your validator node fully set up and synced.
 
 See:
 
-* [Run a Validator Node with Ansible](docs/validate/validate/run-validator-ansible)
-* [Run a Validator Node from Binaries](/docs/validate/validate/run-validator-binaries)
+* [Run a Validator Node with Ansible](../../../../docs/validate/validate/docs/validate/validate/run-validator-ansible/)
+* [Run a Validator Node from Binaries](../../../../docs/validate/validate/run-validator-binaries/)
 
-### Account setup
+#### Account setup
 
 On your validator node, check that the account is set up.
 
 To check, run the following command **on the validator node**:
 
-```sh
+```
     heimdalld show-account
 ```
 
@@ -45,7 +48,7 @@ Your output should appear in the following format:
 
 This will display your address and public key for your validator node. **Note that this address must match with your signer address on Ethereum.**
 
-### Show private key
+#### Show private key
 
 This step is optional.
 
@@ -53,7 +56,7 @@ On your validator node, check that the private key is correct.
 
 To check, run the following command **on the validator node**:
 
-```sh
+```
 heimdalld show-privatekey
 ```
 
@@ -65,23 +68,21 @@ The following output should appear:
 }
 ```
 
-## Stake on Polygon
+### Stake on Polygon
 
 You can stake on Polygon using the [validator dashboard](https://wallet.polygon.technology/staking/validators/).
 
-### Stake using the staking dashboard
+#### Stake using the staking dashboard
 
 1. Access the [validator dashboard](https://wallet.polygon.technology/staking/validators/).
-1. Log in with your wallet. MetaMask is the recommended wallet.
+2.  Log in with your wallet. MetaMask is the recommended wallet.
 
-   You have to make sure that you login using the same address where your MATIC tokens are present.
+    You have to make sure that you login using the same address where your MATIC tokens are present.
+3.  Click **Become a Validator**
 
-1. Click **Become a Validator**
-
-   You will be asked to set up your node. If you haven't already set up your node by now, you will need to do so, else if you proceed ahead you will receive an error when you attempt to stake.
-
-1. On the next screen, add your validator details, the commission rate, and the staking amount.
-1. Click **Stake Now**.
+    You will be asked to set up your node. If you haven't already set up your node by now, you will need to do so, else if you proceed ahead you will receive an error when you attempt to stake.
+4. On the next screen, add your validator details, the commission rate, and the staking amount.
+5. Click **Stake Now**.
 
 Once the transaction is completed you will have staked successfully to become a validator. You will be asked thrice to confirm the transaction.
 
@@ -95,18 +96,18 @@ For the changes to take effect on the [staking dashboard](https://wallet.polygon
 
 :::
 
-### Check the balance
+#### Check the balance
 
 To check the balance of your address:
 
-```sh
+```
 heimdallcli query auth account SIGNER_ADDRESS --chain-id CHAIN_ID
 ```
 
 where
 
-* SIGNER_ADDRESS — your [signer address](/docs/validate/glossary#validator).
-* CHAIN_ID — the Polygon mainnet chain ID with the client prefix: `heimdall-137`.
+* SIGNER\_ADDRESS — your [signer address](../../../../docs/validate/glossary/#validator).
+* CHAIN\_ID — the Polygon mainnet chain ID with the client prefix: `heimdall-137`.
 
 The following output should appear:
 
@@ -120,7 +121,7 @@ accountnumber: 0
 sequence: 0
 ```
 
-### Claim rewards as a validator
+#### Claim rewards as a validator
 
 Once you are set up and staked as a validator, you will earn rewards for performing validator duties. When you perform validator duties dutifully, you get rewarded.
 
@@ -131,7 +132,7 @@ You will see two buttons on your profile:
 * Withdraw Reward
 * Restake Reward
 
-#### Withdraw Reward
+**Withdraw Reward**
 
 As a validator, you earn rewards as long as you are performing your validator duties correctly.
 
@@ -139,7 +140,7 @@ Clicking **Withdraw Reward** will get your rewards back to your wallet.
 
 The dashboard will update after 12 block confirmations.
 
-#### Restake Reward
+**Restake Reward**
 
 Restaking your rewards is an easy way to increase your stake as a validator.
 
