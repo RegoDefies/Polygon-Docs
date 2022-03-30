@@ -37,7 +37,7 @@ Polygon is allocating 12% of its total supply of 10 billion tokens to fund the s
 
 First year will see the maximum amount of tokens allocated as staking rewards. This is allocated in a way to ensure gradual decoupling of staking rewards from being the dominant component of the validator rewards.
 
-See also [Rewards](../validate/rewards/).
+See also [Rewards](../docs/validate/rewards/).
 
 #### Can I participate in the staking process, even if I do not want to run a node?
 
@@ -45,7 +45,7 @@ MATIC token holders who do not wish to run their own node can delegate their tok
 
 There is no minimum amount requirement for delegation. Any amount, even 1 MATIC, will be accepted in the system. However, it is up to validators to set a minimum limit or not while accepting delegations. Validators might charge a commission in exchange for their node running services. Other than the commission charged, one needs to evaluate the track record of the validator for example, average uptime or if the node was ever compromised.
 
-See also [Delegate](../validate/delegate/).
+See also [Delegate](../docs/validate/delegate/).
 
 #### I've staked my Matic tokens. How can I stake more?
 
@@ -83,7 +83,7 @@ It depends on your understanding and research on which validator you would want 
 
 #### How are staking rewards allocated to stakers?
 
-Tokens to be given out as staking rewards for the first five years of the network life are fixed. This reward is divided per [checkpoint](../validate/glossary/#checkpoint-transaction) and the amount to be shared with all stakers is absolute. The reward rate will be higher during lower bonding rates and vice-versa otherwise.
+Tokens to be given out as staking rewards for the first five years of the network life are fixed. This reward is divided per [checkpoint](../docs/validate/glossary/#checkpoint-transaction) and the amount to be shared with all stakers is absolute. The reward rate will be higher during lower bonding rates and vice-versa otherwise.
 
 The staking reward gets distributed proportionally to all stakers; proposer and signers, with the exception of proposer getting a bonus.
 
@@ -97,8 +97,8 @@ Stakers can withdraw their tokens after the unbonding period ends. The duration 
 
 See:
 
-* [Delegate](../validate/delegate/)
-* [Validator Staking Operations](../validate/mainnet/validator-staking-operations/)
+* [Delegate](../docs/validate/delegate/)
+* [Validator Staking Operations](../docs/validate/mainnet/validator-staking-operations/)
 
 #### How to unbond?
 
@@ -224,7 +224,7 @@ No. All your funds need to be on the Main Ethereum Network.
 
 #### When do rewards get distributed?
 
-The rewards are distributed whenever a [checkpoint](../validate/glossary/#checkpoint-transaction) is submitted.
+The rewards are distributed whenever a [checkpoint](../docs/validate/glossary/#checkpoint-transaction) is submitted.
 
 Approximately 20188 Matic tokens are distributed proportionately on each successful checkpoint submission to each delegator based on their stake relative to the overall staking pool of all validators and delegators. Also, the percentage for the reward distributed to each delegator will vary with each checkpoint depending on the relative stake of the delegator, validator and the overall stake.
 
@@ -318,7 +318,7 @@ Yes, it will work the same as Foundation nodes.
 
 #### Will I still get rewards after delegating to an external node?
 
-Yes, rewards will be distributed the same as earlier with the Foundation nodes. Every successful submission of a [checkpoint](\(/docs/validate/glossary/#checkpoint-transaction\)) will yield rewards. Rewards will be distributed and calculated at every checkpoint relative to the stake ratio, as currently implemented.
+Yes, rewards will be distributed the same as earlier with the Foundation nodes. Every successful submission of a [checkpoint](../docs/faq/\(/docs/validate/glossary/#checkpoint-transaction\)) will yield rewards. Rewards will be distributed and calculated at every checkpoint relative to the stake ratio, as currently implemented.
 
 #### Will there be any unbonding period if I unbond from an external node?
 
@@ -342,4 +342,4 @@ The Move Stake is a single transaction only. All transactions would be on the Et
 
 #### If the external validator is missing signing checkpoints, does that mean I lose on rewards too?
 
-Yes. Rewards are distributed every [checkpoint](../validate/glossary/#checkpoint-transaction) and each validator is supposed to sign the checkpoint transaction. However, if any validator misses signing the checkpoint transaction for that checkpoint, rewards are not issued for that validator. Which in return means that you as delegator will not earn any rewards for that particular checkpoint.
+Yes. Rewards are distributed every [checkpoint](../docs/validate/glossary/#checkpoint-transaction) and each validator is supposed to sign the checkpoint transaction. However, if any validator misses signing the checkpoint transaction for that checkpoint, rewards are not issued for that validator. Which in return means that you as delegator will not earn any rewards for that particular checkpoint.
